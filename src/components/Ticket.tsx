@@ -32,7 +32,7 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
     >
       {/* Event Header with Image */}
       <div className="relative">
-        {imageUrl && (
+        {imageUrl ? (
           <div className="relative w-full aspect-[21/9] ">
             <Image
               src={imageUrl}
@@ -43,7 +43,16 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/90" />
           </div>
-        )}
+        ) : (<div className="relative w-full aspect-[21/9] ">
+          <Image
+            src={`../../Images/ticket.png`}
+            alt={ticket.event.name}
+            fill
+            className={`object-cover object-center ${ticket.event.is_cancelled ? "opacity-50" : ""}`}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/90" />
+        </div>)}
         <div
           className={`px-6 py-4 ${imageUrl ? "absolute bottom-0 left-0 right-0" : ticket.event.is_cancelled ? "bg-red-600" : "bg-blue-600"} `}
         >
