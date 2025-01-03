@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Button } from "../components/ui/button";
@@ -11,7 +10,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "../components/ui/form";
 import { z } from "zod";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
@@ -280,7 +279,7 @@ export default function EventForm({ mode, initialData }: EventFormProps) {
                 <FormControl>
                   <div className="relative">
                     <span className="absolute left-2 top-1/2 -translate-y-1/2">
-                      ₹
+                      £
                     </span>
                     <Input
                       type="number"
