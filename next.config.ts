@@ -1,22 +1,28 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* Config options here */
   images: {
     remotePatterns: [
       {
-        hostname: "little-eagle-943.convex.cloud",
         protocol: "https",
+        hostname: "little-eagle-943.convex.cloud", // Replace with your actual hostname
+      },
+      {
+        protocol: "https",
+        hostname: "scintillating-minnow-468.convex.cloud", // Add additional hostnames as needed
       },
     ],
+    domains: [
+      "little-eagle-943.convex.cloud",
+      "scintillating-minnow-468.convex.cloud", // Allow images from specific domains
+    ],
+    unoptimized: true, // If CORS is still problematic, disable image optimization
   },
   eslint: {
-    // Ignore ESLint errors during the build process
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // Ignore ESLint errors during the build process
   },
   typescript: {
-    // Ignore TypeScript errors during the build process
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // Ignore TypeScript errors during the build process
   },
 };
 
