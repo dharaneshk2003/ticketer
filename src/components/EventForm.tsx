@@ -65,6 +65,7 @@ export default function EventForm({ mode, initialData }: EventFormProps) {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
   const currentImageUrl = useStorageUrl(initialData?.imageStorageId);
+  console.log(`current image url: ${currentImageUrl}`);
 
   // Image upload
   const imageInput = useRef<HTMLInputElement>(null);

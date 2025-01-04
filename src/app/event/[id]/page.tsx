@@ -18,6 +18,7 @@ export default function EventPage() {
     const event = useQuery(api.events.getById, { eventId: params.id as Id<"events"> })
     const availability = useQuery(api.events.getEventAvailability, { eventId: params.id as Id<"events"> })
     const imageUrl = useStorageUrl(event?.imageStorageId);
+    console.log(`image url is : ${imageUrl}`);
 
     if (!event || !availability) {
         return (

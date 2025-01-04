@@ -21,7 +21,7 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
     userId: ticket?.userId ?? "",
   });
   const imageUrl = useStorageUrl(ticket?.event?.imageStorageId);
-  console.log(imageUrl);
+  console.log(`image url : ${imageUrl}`);
 
   if (!ticket || !ticket.event || !user) {
     return <Spinner />;

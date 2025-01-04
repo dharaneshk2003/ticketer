@@ -70,6 +70,7 @@ function SellerEventCard({
   };
 }) {
   const imageUrl = useStorageUrl(event.imageStorageId);
+  console.log(` image url  is ${imageUrl}`)
   const isPastEvent = event.eventDate < Date.now();
 
   return (
