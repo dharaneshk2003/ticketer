@@ -33,9 +33,28 @@ export default function TicketPage() {
   }, [user, ticket]);
 
   const handlePdfDownload = () => {
-    const element = document.getElementById("ticket");
-    html2pdf(element);
-  }
+  const element = document.getElementById("ticket");
+  if (!element) return;
+
+  const options = {
+    margin: 0,
+    filename: 'appointment-ticket.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: {
+      scale: 2,
+      useCORS: true,           // ✅ Enables CORS for remote images (e.g., Mapbox, avatars)
+      allowTaint: false,
+      backgroundColor: null,
+    },
+    jsPDF: {
+      unit: 'px',
+      format: 'a4',
+      orientation: 'portrait',
+    },
+  };
+
+  html2pdf().set(options).from(element).save();
+};
 
   if (!ticket || !ticket.event) {
     return null;
