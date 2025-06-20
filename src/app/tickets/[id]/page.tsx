@@ -38,8 +38,8 @@ export default function TicketPage() {
 
   const options = {
     margin: 0,
-    filename: 'appointment-ticket.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
+    filename: 'event-ticket.pdf',
+    image: { type: 'jpeg', quality: 1 },
     html2canvas: {
       scale: 2,
       useCORS: true,           // ✅ Enables CORS for remote images (e.g., Mapbox, avatars)
