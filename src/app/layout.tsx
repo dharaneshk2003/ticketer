@@ -7,6 +7,8 @@ import Header from "../components/Header";
 import SyncUserWithConvex from "../components/SyncUserWithConvex";
 import { Toaster } from '../components/ui/toaster';
 
+export const dynamic = "force-dynamic";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
