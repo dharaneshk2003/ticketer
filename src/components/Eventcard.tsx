@@ -1,5 +1,5 @@
 "use client";
-
+//event card comment
 import { api } from "../../convex/_generated/api";
 import { useQuery } from "convex/react";
 import { Id } from "../../convex/_generated/dataModel";
