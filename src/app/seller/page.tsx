@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import SellerDashboard from "../../components/SellerDashboard"
 import {auth} from "@clerk/nextjs/server"
 import {redirect} from "next/navigation"

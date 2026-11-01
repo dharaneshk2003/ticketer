@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getConvexClient } from "../../../lib/convex";
 import { api } from "../../../../convex/_generated/api";
 import { auth } from "@clerk/nextjs/server";

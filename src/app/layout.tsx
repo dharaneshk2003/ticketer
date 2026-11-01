@@ -5,6 +5,9 @@ import Header from "../components/Header";
 import SyncUserWithConvex from "../components/SyncUserWithConvex";
 import { Toaster } from "../components/ui/toaster";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 export const metadata: Metadata = {
   title: "Ticketer",
   description: "Book and sell event tickets",

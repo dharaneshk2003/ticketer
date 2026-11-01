@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 import { Suspense } from "react";
 import { api } from "../../../convex/_generated/api";
 import { useQuery } from "convex/react";

@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import EventForm from "../../../components/EventForm";
 
 export default function NewEventPage() {
