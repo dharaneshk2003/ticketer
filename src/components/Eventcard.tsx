@@ -17,7 +17,7 @@ import {
 import { useUser } from "@clerk/nextjs";
 import PurchaseTicket from "./PurchaseTicket";
 import { useRouter } from "next/navigation";
-import { useStorageUrl } from "@/lib/utils";
+import { useStorageUrl } from "../lib/utils";
 import Image from "next/image";
 
 export default function EventCard({ eventId }: { eventId: Id<"events"> }) {

@@ -46,7 +46,7 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
           </div>
         ) : (<div className="relative w-full aspect-[21/9] ">
           <Image
-            src={`../../Images/ticket.png`}
+            src={`/ticket.png`}
             alt={ticket.event.name}
             fill
             className={`object-cover object-center ${ticket.event.is_cancelled ? "opacity-50" : ""}`}
