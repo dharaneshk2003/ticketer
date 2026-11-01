@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
-import { ConvexClientProvider } from "../components/ConvexClientProvider";
+import Providers from "../components/Providers";
 import Header from "../components/Header";
 import SyncUserWithConvex from "../components/SyncUserWithConvex";
 import { Toaster } from "../components/ui/toaster";
-
-export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Ticketer",
@@ -17,16 +14,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
-        <ConvexClientProvider>
-          <ClerkProvider>
-            <Header />
-            <SyncUserWithConvex />
-            {children}
-            <Toaster />
-          </ClerkProvider>
-        </ConvexClientProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased" suppressHydrationWarning>
+        <Providers>
+          <Header />
+          <SyncUserWithConvex />
+          {children}
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

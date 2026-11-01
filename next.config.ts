@@ -1,4 +1,3 @@
-// next.config.js
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -6,27 +5,22 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**.convex.cloud", // Allow all convex.cloud subdomains
+        hostname: "**.convex.cloud",
       },
     ],
-    domains: [
-      "little-eagle-943.convex.cloud",
-      "scintillating-minnow-468.convex.cloud",
-    ],
-    unoptimized: true, // Disable optimization to avoid CORS issues for PDF rendering
+    unoptimized: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Allow builds to proceed even with ESLint errors
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true, // Allow builds even if there are TypeScript errors
+    ignoreBuildErrors: true,
   },
-  // Optional: if you want to customize webpack for libraries like html2pdf.js
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
-        fs: false, // disable fs module on client-side
+        fs: false,
         path: false,
         os: false,
       };
