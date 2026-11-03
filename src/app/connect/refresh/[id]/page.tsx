@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function Refresh() {
+export default async function Refresh() {
   redirect("/seller");
 }

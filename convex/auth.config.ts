@@ -1,8 +1,8 @@
 export default {
-    providers: [
-      {
-        domain: "https://alert-molly-89.clerk.accounts.dev",
-        applicationID: "convex",
-      },
-    ]
-  };
+  providers: [
+    {
+      domain: "https://divine-vervet-7459.clerk.accounts.dev",
+      applicationID: "convex",
+    },
+  ],
+};
